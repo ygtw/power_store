@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ravikumar Chauhan">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pure CSS Progress Bars</title>
+
+  <!-- Meta and Opengraph tags -->
+  <meta name="description" content="Pure CSS Progress Bars">
+  <meta name="keywords" content="css, html, progress bar">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/fonts/font-awesome-4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/cssprogress.css">
+  <style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+* {
+  
+    font-family: 'Noto Sans TC', sans-serif;
+    font-style: normal;
+    font-size:14px;
+    color:#333;
+    text-align: center;
+}
+body
+{
+    background-color:rgb(254,235,226);
+}
+.cssProgress .cssProgress-success {
+    background-color: #a43c65 !important;
+    color: white;
+
+}
+  </style>
+</head>
+<body>
+
+
+    <img src="logo.png" width="50%" / >
+    <div class="project">
+        <div id="example-5" class="examples">
+        <h3>目前動力值</h3>
+
+        <div class="cssProgress" width="50%">
+          <div class="progress2">
+            <div id="pgs" class="cssProgress-bar cssProgress-success cssProgress-active" data-percent="90" style="width: 60%;">
+              <span class="cssProgress-label"  id="num" >60%</span>
+            </div>
+          </div>
+        </div>
+
+        <span class="btn btn-primary btn-lg" onclick="plus(1)">很棒(+)</span> &nbsp;&nbsp; <span class="btn btn-primary progressReset" onclick="plus(-1)">再加油(-)</span>
+
+      </div><!-- @end #example-5 -->
+      </div>
+
+    
+  <!-- main -->
+  <main>
+    <div class="main-content">
+
+
+
+
+    </div>
+  </main><!-- @end main -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="footer-content">
+        <span><strong>草屯療養院 職能治療科 關心您</strong></span>
+      </div>
+    </div>
+  </footer><!-- @end footer -->
+
+  <!-- Include scripts -->
+  <script type="text/javascript" src="assets/js/jquery/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="assets/js/functions.js"></script>
+  <script type="text/javascript">
+    var wi=50;
+function plus(x) {
+  // body...
+  console.log("XD")
+  $("#pgs").text(wi + "");
+  progress_bar = $("#pgs") 
+   progress_bar.animate({
+          width: (wi+=x)+"%"
+        }, {
+          duration: 1000,
+          step: function(x) {
+            //progress_label.text(Math.round(x) + '%');
+          }
+        });
+        
+}
+
+
+
+  </script>
+</body>
+</html>

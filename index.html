@@ -22,11 +22,11 @@
   
     font-family: 'Noto Sans TC', sans-serif;
     font-style: normal;
-    font-size: large;
+    font-size: xx-large;
     color:#333;
     text-align: center;
 }
-body
+body 
 {
     background-color:rgb(254,235,226);
 }
@@ -35,6 +35,23 @@ body
     color: white;
 
 }
+.progress2 .cssProgress-bar {
+     height: 40px; 
+    border-radius: 9px;
+}
+.btn.btn-primary {
+    border: 1px solid #ffffff;
+    background-color: #34a59e;
+}
+.btn {
+    height: 100px;
+    width: 100px;
+    font-size: 0.5em;
+    font-weight: bold;
+    /* line-height: 30px; */
+    padding: 0px 14px;
+    border-radius: 100px;
+  }
   </style>
 </head>
 <body>
@@ -53,7 +70,7 @@ body
           </div>
         </div>
 
-        <span class="btn btn-primary btn-lg" onclick="plus(1)">很棒(+)</span> &nbsp;&nbsp; <span class="btn btn-primary progressReset" onclick="plus(-1)">再加油(-)</span>
+        <button class="btn btn-primary btn-lg" onclick="plus(1)">很棒(+)</button> &nbsp;&nbsp; <button class="btn btn-primary progressReset" onclick="plus(-1)">再加油(-)</button>
 
       </div><!-- @end #example-5 -->
       </div>
@@ -86,10 +103,11 @@ body
 function plus(x) {
   // body...
   console.log("XD")
+  wi=wi+x
   $("#pgs").text(wi + "");
   progress_bar = $("#pgs") 
    progress_bar.animate({
-          width: (wi+=x)+"%"
+          width: wi+"%"
         }, {
           duration: 1000,
           step: function(x) {

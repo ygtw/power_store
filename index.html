@@ -25,6 +25,8 @@
     font-size: xx-large;
     color:#333;
     text-align: center;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
 }
 body 
 {
@@ -36,7 +38,7 @@ body
 
 }
 .progress2 .cssProgress-bar {
-     height: 40px; 
+     height: 55px; 
     border-radius: 9px;
 }
 .btn.btn-primary {
@@ -52,6 +54,12 @@ body
     padding: 0px 14px;
     border-radius: 100px;
   }
+  .center {
+    margin: auto;
+    width: 50%;
+    border: 0px solid green;
+    padding: 10px;
+}
   </style>
 </head>
 <body>
@@ -62,9 +70,9 @@ body
         <div id="example-5" class="examples">
         <h3>目前動力值</h3>
 
-        <div class="cssProgress" width="50%">
+        <div class="cssProgress center" width="50%">
           <div class="progress2">
-            <div id="pgs" class="cssProgress-bar cssProgress-success cssProgress-active" data-percent="90" style="width: 60%;">
+            <div id="pgs" class=" center cssProgress-bar cssProgress-success cssProgress-active" data-percent="90" style="width: 60%;">
               <span class="cssProgress-label"  id="num" >60%</span>
             </div>
           </div>
@@ -90,7 +98,7 @@ body
   <footer>
     <div class="row">
       <div class="footer-content">
-        <span><strong>草屯療養院 職能治療科 關心您</strong></span>
+        <span><strong>草屯療養院 <br>職能治療科 關心您</strong></span>
       </div>
     </div>
   </footer><!-- @end footer -->
@@ -116,6 +124,7 @@ function plus(x) {
         });
         
 }
+document.addEventListener("touchstart", function(){}, true);
 
 
 
